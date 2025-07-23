@@ -48,8 +48,40 @@ src/
 1. Clone the repository
    ```bash
    git clone <repository-url>
-   cd health-checker/fe
    ```
+
+2. Navigate to /fe and /be directories
+   ```bash
+   cd health-checker/fe
+   cd health-checker/be
+   ```
+
+3. Install dependencies
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+4. Start the development server
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
+
+5. Open your browser and navigate to http://localhost:5173
+
+## Build for Production
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+The built files will be in the `dist` directory, ready to be deployed.
+</ADDITIONAL_METADATA>
 
 2. Install dependencies
    ```bash
