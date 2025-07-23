@@ -1,0 +1,361 @@
+{
+  "survey": {
+    "id": "bp_health_assessment",
+    "title": "Health Assessment",
+    "version": "1.0",
+    "questions": [
+      {
+        "id": "ethnicity",
+        "type": "single_choice",
+        "question": "What is your ethnic group?",
+        "options": [
+          {
+            "label": "White",
+            "value": "white"
+          },
+          {
+            "label": "Mixed or Multiple ethnic groups",
+            "value": "mixed"
+          },
+          {
+            "label": "Asian or Asian British",
+            "value": "asian"
+          },
+          {
+            "label": "Black or Black British, Caribbean or African",
+            "value": "black"
+          },
+          {
+            "label": "Other ethnic group",
+            "value": "other"
+          },
+          {
+            "label": "Prefer not to say",
+            "value": "not_said"
+          }
+        ]
+      },
+      {
+        "id": "ethnic_white",
+        "type": "single_choice",
+        "preCondition": {
+          "questionId": "ethnicity",
+          "value": "white"
+        },
+        "question": "Please specify:",
+        "options": [
+          {
+            "label": "English/Welsh/Scottish/Northern Irish/British",
+            "value": "british"
+          },
+          {
+            "label": "Irish",
+            "value": "irish"
+          },
+          {
+            "label": "Gypsy or Irish Traveller",
+            "value": "gypsy"
+          },
+          {
+            "label": "Roma",
+            "value": "roma"
+          },
+          {
+            "label": "Other white background",
+            "value": "other_white"
+          }
+        ]
+      },
+      {
+        "id": "ethnic_mixed",
+        "type": "single_choice",
+        "preCondition": {
+          "questionId": "ethnicity",
+          "value": "mixed"
+        },
+        "question": "Please specify:",
+        "options": [
+          {
+            "label": "White and Black Caribbean",
+            "value": "white_black_caribbean"
+          },
+          {
+            "label": "White and Black African",
+            "value": "white_black_african"
+          },
+          {
+            "label": "White and Asian",
+            "value": "white_asian"
+          },
+          {
+            "label": "Other Mixed or Multiple backgrounds",
+            "value": "other_mixed"
+          }
+        ]
+      },
+      {
+        "id": "ethnic_asian",
+        "type": "single_choice",
+        "preCondition": {
+          "questionId": "ethnicity",
+          "value": "asian"
+        },
+        "question": "Please specify:",
+        "options": [
+          {
+            "label": "Indian",
+            "value": "indian"
+          },
+          {
+            "label": "Pakistani",
+            "value": "pakistani"
+          },
+          {
+            "label": "Chinese",
+            "value": "chinese"
+          },
+          {
+            "label": "Other Asian backgrounds",
+            "value": "other_asian"
+          }
+        ]
+      },
+      {
+        "id": "ethnic_black",
+        "type": "single_choice",
+        "preCondition": {
+          "questionId": "ethnicity",
+          "value": "black"
+        },
+        "question": "Please specify:",
+        "options": [
+          {
+            "label": "Caribbean",
+            "value": "caribbean"
+          },
+          {
+            "label": "African",
+            "value": "african"
+          },
+          {
+            "label": "Other Black",
+            "value": "other_black"
+          }
+        ]
+      },
+      {
+        "id": "smoking_status",
+        "type": "single_choice",
+        "question": "Do you smoke?",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Yes"
+          },
+          {
+            "value": "used_to",
+            "label": "Used to"
+          },
+          {
+            "value": "never",
+            "label": "Never"
+          }
+        ]
+      },
+      {
+        "id": "smoking_frequency",
+        "type": "single_choice",
+        "preCondition": {
+          "questionId": "smoking_status",
+          "value": "yes"
+        },
+        "question": "How many do you smoke per day?",
+        "options": [
+          {
+            "value": "less_than_1",
+            "label": "Less than 1"
+          },
+          {
+            "value": "1_to_9",
+            "label": "1-9"
+          },
+          {
+            "value": "10_to_19",
+            "label": "10-19"
+          },
+          {
+            "value": "20_plus",
+            "label": "20+"
+          }
+        ]
+      },
+      {
+        "id": "quit_timeline",
+        "type": "single_choice",
+        "preCondition": {
+          "questionId": "smoking_status",
+          "value": "used_to"
+        },
+        "question": "When did you quit smoking?",
+        "options": [
+          {
+            "value": "less_than_3_months",
+            "label": "Less than 3 months"
+          },
+          {
+            "value": "3_to_12_months",
+            "label": "3-12 months"
+          },
+          {
+            "value": "1_to_5_years",
+            "label": "1-5 years"
+          },
+          {
+            "value": "5_plus_years",
+            "label": "5+ years"
+          }
+        ]
+      },
+      {
+        "id": "recent_bp_measurement",
+        "type": "single_choice",
+        "question": "Have you had your blood pressure measured in the last 12 months?",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Yes"
+          },
+          {
+            "value": "no",
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "id": "previous_bp_range",
+        "type": "single_choice",
+        "preCondition": {
+          "questionId": "recent_bp_measurement",
+          "value": "yes"
+        },
+        "question": "Was your measurement in the high or at-risk range?",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Yes"
+          },
+          {
+            "value": "no",
+            "label": "No"
+          },
+          {
+            "value": "dont_remember",
+            "label": "Don't remember"
+          }
+        ]
+      },
+      {
+        "id": "bp_medication",
+        "type": "single_choice",
+        "question": "Are you currently taking medication for high blood pressure?",
+        "options": [
+          {
+            "value": "yes",
+            "label": "Yes"
+          },
+          {
+            "value": "no",
+            "label": "No"
+          }
+        ]
+      }
+    ],
+    "bpTest": {
+      "id": "blood_pressure_test",
+      "type": "bp_test",
+      "title": "Blood Pressure Test",
+      "description": "Please take your blood pressure measurement using the provided device.",
+      "recommendations": {
+        "low": {
+          "category": "Low Blood Pressure",
+          "priority": "medium",
+          "summary": "Your blood pressure is below normal range. While not always concerning, it's worth monitoring.",
+          "lifestyle_recommendations": [
+            "Wear compression stockings if recommended by your doctor",
+            "Exercise regularly to improve circulation"
+          ],
+          "medical_advice": [
+            "Consult your healthcare provider if you experience dizziness, fainting, or fatigue",
+            "Review current medications with your doctor",
+            "Monitor blood pressure regularly"
+          ],
+          "follow_up": "Monitor blood pressure weekly and consult your doctor if symptoms persist."
+        },
+        "normal": {
+          "category": "Normal Blood Pressure",
+          "priority": "low",
+          "summary": "Congratulations! Your blood pressure is in the normal range. Keep up the good work with healthy habits.",
+          "lifestyle_recommendations": [
+            "Maintain a healthy weight",
+            "Limit sodium intake to less than 2,300mg per day",
+            "Exercise for at least 150 minutes per week",
+            "Limit alcohol consumption",
+            "Manage stress through relaxation techniques",
+            "Get 7-9 hours of quality sleep nightly"
+          ],
+          "medical_advice": [
+            "Continue regular blood pressure monitoring",
+            "Maintain regular check-ups with your healthcare provider",
+            "Keep track of any family history of hypertension"
+          ],
+          "follow_up": "Recheck blood pressure annually or as recommended by your healthcare provider."
+        },
+        "elevated": {
+          "category": "Elevated Blood Pressure",
+          "priority": "medium",
+          "summary": "Your blood pressure is elevated. This is a warning sign that you may develop high blood pressure without lifestyle changes.",
+          "lifestyle_recommendations": [
+            "Reduce sodium intake to less than 1,500mg per day",
+            "Increase physical activity to 30 minutes most days",
+            "Lose weight if overweight (even 5-10 pounds can help)",
+            "Limit alcohol to moderate levels",
+            "Quit smoking if you smoke",
+            "Practice stress management techniques",
+            "Follow the DASH diet pattern"
+          ],
+          "medical_advice": [
+            "See your healthcare provider within 3-6 months",
+            "Discuss your family history and risk factors",
+            "Consider cardiovascular risk assessment",
+            "Monitor blood pressure at home regularly"
+          ],
+          "follow_up": "Recheck blood pressure in 3-6 months. If still elevated, discuss treatment options with your doctor."
+        },
+        "high": {
+          "category": "High Blood Pressure",
+          "priority": "high",
+          "summary": "You have Stage 1 high blood pressure. Immediate lifestyle changes and possibly medication are needed.",
+          "lifestyle_recommendations": [
+            "Reduce sodium to less than 1,500mg daily",
+            "Engage in 40 minutes of moderate-intensity exercise 3-4 times per week",
+            "Achieve and maintain a healthy weight",
+            "Quit smoking immediately if you smoke",
+            "Limit alcohol consumption",
+            "Implement stress reduction strategies",
+            "Follow the DASH eating plan strictly"
+          ],
+          "medical_advice": [
+            "Schedule an appointment with your healthcare provider within 1 month",
+            "Discuss medication options with your doctor",
+            "Assess for other cardiovascular risk factors",
+            "Consider additional testing (EKG, blood work)",
+            "Establish a treatment plan with your healthcare team",
+            "Monitor for target organ damage"
+          ],
+          "follow_up": "Follow up with healthcare provider in 1 month to assess response to treatment."
+        }
+      }
+    },
+    "medical_disclaimer": "This assessment is for informational purposes only and does not replace professional medical advice. Always consult with a healthcare provider for medical decisions."
+  }
+}

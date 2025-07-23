@@ -60,9 +60,9 @@ src/
 
 3. Start the development server
    ```bash
-   npm start
+   npm run dev
    # or
-   yarn start
+   yarn dev
    ```
 
 4. Open your browser and navigate to http://localhost:5173
