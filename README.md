@@ -1,4 +1,4 @@
-# SISU Health Checker Frontend
+# SISU Health Checker
 
 A React-based web application for conducting health assessments through interactive questionnaires and providing personalized health insights.
 
